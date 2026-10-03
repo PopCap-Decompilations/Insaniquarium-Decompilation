@@ -1,0 +1,73 @@
+// Insaniquarium.rc
+// The resources of the original Insaniquarium.exe (icon, Games Explorer definition, manifest and version).
+// The Steam version's "Paste" menu (102) and "Enter Steam User Name" dialog (107) are not in the original.
+
+#include <windows.h>
+
+IDI_MAIN_ICON   ICON   "Insaniquarium.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Game Definition
+//
+
+__GDF_XML       DATA    "gdf.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Manifest: the original's, byte for byte (so the linker's own manifest is turned off)
+//
+
+1 RT_MANIFEST
+BEGIN
+    "<?xml version='1.0' encoding='UTF-8' standalone='yes'?>\r\n"
+    "<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>\r\n"
+    "  <trustInfo xmlns=""urn:schemas-microsoft-com:asm.v2"">\r\n"
+    "    <security>\r\n"
+    "      <requestedPrivileges>\r\n"
+    "        <requestedExecutionLevel\r\n"
+    "          level=""asInvoker""\r\n"
+    "          uiAccess=""false""/>\r\n"
+    "      </requestedPrivileges>\r\n"
+    "    </security>\r\n"
+    "  </trustInfo>\r\n"
+    "</assembly>\r\n"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 1, 1, 0, 0
+PRODUCTVERSION 1, 1, 0, 0
+FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+FILEFLAGS 0x1L
+#else
+FILEFLAGS 0x0L
+#endif
+FILEOS 0x4
+FILETYPE 0x1L
+FILESUBTYPE 0x0L
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "040904b0"
+BEGIN
+VALUE "CompanyName", "PopCap Games"
+VALUE "FileDescription", "Insaniquarium"
+VALUE "FileVersion", "1, 1, 0, 0"
+VALUE "InternalName", "WinFish"
+VALUE "LegalCopyright", "Copyright (C) 2004"
+VALUE "OriginalFilename", "WinFish.exe"
+VALUE "ProductName", "Insaniquarium"
+VALUE "ProductVersion", "1.1"
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x409, 1200
+END
+END

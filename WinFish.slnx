@@ -1,0 +1,11 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Release" />
+    <BuildType Name="Debug" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="source/WinFish/WinFish.vcxproj" Id="f40ba8e8-71ed-4517-aba1-19898a06b531">
+    <BuildDependency Project="source/SexyAppFramework/SexyAppBase VS2005.vcxproj" />
+  </Project>
+  <Project Path="source/SexyAppFramework/SexyAppBase VS2005.vcxproj" Id="da08caba-92ac-40f0-b63d-6ace7814d600" />
+</Solution>
